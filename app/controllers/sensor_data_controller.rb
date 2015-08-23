@@ -53,6 +53,6 @@ class SensorDataController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def sensor_datum_params
-      params.require(:sensor_datum).permit(:ruido)
+      params.require(:sensor_datum).permit(:ruido, :dispositivo_id)
     end
 end
