@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Dispositivos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Local</th>
+      <th>Lat</th>
+      <th>Long</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dispositivos.each do |dispositivo| %>
+      <tr>
+        <td><%= dispositivo.name %></td>
+        <td><%= dispositivo.local %></td>
+        <td><%= dispositivo.lat %></td>
+        <td><%= dispositivo.long %></td>
+        <td><%= link_to 'Show', dispositivo %></td>
+        <td><%= link_to 'Edit', edit_dispositivo_path(dispositivo) %></td>
+        <td><%= link_to 'Destroy', dispositivo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dispositivo', new_dispositivo_path %>
