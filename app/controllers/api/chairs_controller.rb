@@ -1,5 +1,5 @@
 module Api  
-  class ChairController < ApplicationController
+  class ChairsController < ApplicationController
     
      private
 
