@@ -24,10 +24,12 @@ gem "refills"
 gem "sass-rails", "~> 5.0"
 gem "simple_form"
 gem "title"
+
 gem "uglifier"
 
 gem 'jbuilder' # used for serialization of models into JSON  
 gem 'kaminari' # adds pagination to ActiveModels  
+gem 'responders', '~> 2.0'
 
 group :development do
   gem "spring"
