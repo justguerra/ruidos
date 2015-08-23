@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Ruidos
 
 ## Getting Started
@@ -31,6 +30,3 @@ programming in style.
 * [Protocol](http://github.com/thoughtbot/guides/blob/master/protocol)
 * [Best Practices](http://github.com/thoughtbot/guides/blob/master/best-practices)
 * [Style](http://github.com/thoughtbot/guides/blob/master/style)
-=======
-# ruidos
->>>>>>> 8ffdf41cea0a24e8680c4367a2d4d26244983862
