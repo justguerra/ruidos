@@ -3,7 +3,11 @@ class ChairsController < ApplicationController
 
   # GET /chairs
   def index
-    @chairs = Chair.all
+    respond_to do |format|
+      @chairs = Chair.all
+      format.html { render action: 'index' }
+      format.json { render json:  @chair, status: 200 }
+    end
   end
 
   # GET /chairs/1
@@ -23,12 +27,15 @@ class ChairsController < ApplicationController
   def create
     @chair = Chair.new(chair_params)
 
-    if @chair.save
-      format.html { redirect_to @event, notice: 'save foi criado com sucesso!' }
-      format.json { render action: 'show', status: :created, location: @chair }
-    else
-      format.html { render action: 'new' }
-      format.json { render json: @chair.errors, status: :unprocessable_entity }
+
+    respond_to do |format|
+      if @chair.save
+        format.html { redirect_to @event, notice: 'save foi criado com sucesso!' }
+        format.json { render action: 'show', status: :created, location: @chair }
+      else
+        format.html { render action: 'new' }
+        format.json { render json: @chair.errors, status: :unprocessable_entity }
+      end
     end
 
   end
