@@ -16,7 +16,7 @@
     <% @sensor_data.each do |sensor_datum| %>
       <tr>
         <td><%= sensor_datum.ruido %></td>
-        <td><%= sensor_datum.sispositivo_id %></td>
+        <td><%= sensor_datum.dispositivo_id %></td>
 
         <td><%= link_to 'Show', sensor_datum %></td>
         <td><%= link_to 'Edit', edit_sensor_datum_path(sensor_datum) %></td>
