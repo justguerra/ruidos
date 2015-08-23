@@ -26,6 +26,9 @@ gem "simple_form"
 gem "title"
 gem "uglifier"
 
+gem 'jbuilder' # used for serialization of models into JSON  
+gem 'kaminari' # adds pagination to ActiveModels  
+
 group :development do
   gem "spring"
   gem "spring-commands-rspec"
