@@ -24,10 +24,13 @@ class ChairsController < ApplicationController
     @chair = Chair.new(chair_params)
 
     if @chair.save
-      redirect_to @chair, notice: 'Chair was successfully created.'
+      format.html { redirect_to @event, notice: 'save foi criado com sucesso!' }
+      format.json { render action: 'show', status: :created, location: @chair }
     else
-      render :new
+      format.html { render action: 'new' }
+      format.json { render json: @chair.errors, status: :unprocessable_entity }
     end
+
   end
 
   # PATCH/PUT /chairs/1
